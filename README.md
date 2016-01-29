@@ -11,9 +11,9 @@ The boundary data is sourced from: `https://raw.githubusercontent.com/johan/worl
 
 ## Example Usage
 This service accepts `GET` and `POST` requests taking an array and returning a JSON containing two arrays, one which are those that "passed" the filter (i.e. lies outside the US boundaries) and the other that "failed". <br>
-`http://localhost:8080/us-geospatial-filter/home?[{latitude:50,longitude:15},...]` 
+`http://localhost:8080/filter?[{"latitude":50,"longitude":15},...]` 
 <br> OR <br>
-`http://localhost:8080/us-geospatial-filter/home?[<geojson>,...]`
+`http://localhost:8080/filter?[<geojson>,...]`
 
 
 ## Service Standup

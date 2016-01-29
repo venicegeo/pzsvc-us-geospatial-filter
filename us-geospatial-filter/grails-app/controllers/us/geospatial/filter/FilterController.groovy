@@ -4,7 +4,7 @@ package us.geospatial.filter
 import groovy.json.JsonOutput
 
 
-class HomeController {
+class FilterController {
 	def boundaryFilterService
 
 
