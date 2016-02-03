@@ -117,5 +117,9 @@ log4j.main = {
 }
 
 
+app {
+	bootTime = new Date()
+	count = 0
+}
 grails.resources.work.dir = ".resources"
 usBoundaries

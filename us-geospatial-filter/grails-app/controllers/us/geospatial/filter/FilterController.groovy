@@ -6,9 +6,12 @@ import groovy.json.JsonOutput
 
 class FilterController {
 	def boundaryFilterService
+	def grailsApplication
 
 
-	def index() { 
+	def index() {
+		grailsApplication.config.app.count++	
+ 
 		def map = boundaryFilterService.serviceMethod(params, request)
 		def json = new JsonOutput().toJson(map)
 
