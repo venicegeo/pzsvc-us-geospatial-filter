@@ -6,7 +6,7 @@ Filters geometries based on whether they intersect the boundaries of the United 
 * Vagrant 1.8.1
 
 ## Boundary Geometry
-The boundary data is sourced from: `https://raw.githubusercontent.com/johan/world.geo.json/master/countries/USA.geo.json`.
+The boundary data is sourced from: `http://eric.clst.org/wupl/Stuff/gz_2010_us_outline_20m.json`.
 
 
 ## Example Usage
