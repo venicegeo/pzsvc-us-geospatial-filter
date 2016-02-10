@@ -36,9 +36,12 @@ class BoundaryFilterService {
 			// Support GeoJSON
 			if (json["features"]) {
 				json.features.each() {
-					def coordinates = it.geometry.coordinates
-					if (checkGeometry(coordinates)) { failed.push(it) }
-					else { passed.push(it) } 
+					def coordinates = it.geometry ? it.geometry.coordinates : null
+					if (coordinates) {
+						if (checkGeometry(coordinates)) { failed.push(it) }
+						else { passed.push(it) } 
+					}
+					else { passed.push(it) }
 				}
 				
 				json.features = []
@@ -61,6 +64,7 @@ class BoundaryFilterService {
 					if (checkGeometry(coordinates)) { failed.push(json) }
 					else { passed.push(json) }
 				}
+				else { passed.push(it) }
 
 
 				return [passed: passed, failed: failed]
@@ -75,6 +79,7 @@ class BoundaryFilterService {
 					if (checkGeometry(coordinates)) { failed.push(it) }
 					else { passed.push(it) }
 				}
+				else { passed.push(it) }
 			}
 
 		
